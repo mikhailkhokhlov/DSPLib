@@ -28,14 +28,14 @@ module rotator #(parameter ITERATION=0)
         begin
           if (i_theta >= 0)
             begin
-              o_x     <= i_x - (i_y >>> ITERATION);
-              o_y     <= i_y + (i_x >>> ITERATION);
+              o_x     <= i_x - (i_y >> ITERATION);
+              o_y     <= i_y + (i_x >> ITERATION);
               o_theta <= i_theta - i_arctan;
             end
           else
             begin
-              o_x     <= i_x + (i_y >>> ITERATION);
-              o_y     <= i_y - (i_x >>> ITERATION);
+              o_x     <= i_x + (i_y >> ITERATION);
+              o_y     <= i_y - (i_x >> ITERATION);
               o_theta <= i_theta + i_arctan;
             end
         end

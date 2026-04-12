@@ -45,10 +45,10 @@ module phase_generator(
 
   always @(*)
     case (reg_state)
-      FIRST : reg_delta =  16'b1010;
-      SECOND: reg_delta = -16'b1010;
-      THIRD : reg_delta =  16'b1010;
-      FORTH : reg_delta = -16'b1010;
+      FIRST : reg_delta =  16'b1;
+      SECOND: reg_delta = -16'b1;
+      THIRD : reg_delta =  16'b1;
+      FORTH : reg_delta = -16'b1;
     endcase
 
   assign o_phase   = reg_phase;
